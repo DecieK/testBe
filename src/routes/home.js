@@ -6,7 +6,7 @@ router.get("/", async (req, res, next) => {
     let  chitietv = await db.chitietves.findAll({})
 
     return res.status(200).json({
-
+        title: "Express Testing",
 
         chitietv
 
