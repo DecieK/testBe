@@ -1,5 +1,5 @@
 // import { getSpaceUntilMaxLength } from "@testing-library/user-event/dist/utils";
-import db from "../models/index.js";
+import db from "../models/index";
 // const { Op } = require("sequelize");
 // import bcrypt, { hash } from "bcryptjs"; //hashpassword
 
@@ -1827,4 +1827,7 @@ module.exports = {
   handleThemTTNhanvien: handleThemTTNhanvien,
   handleSuaTTNhanvien: handleSuaTTNhanvien,
   handleXoaTTNhanvien: handleXoaTTNhanvien
+
+
+
 };

@@ -1,5 +1,5 @@
-const express = require("express");
-// import express from "express";
+//const express = require("express");
+import express from "express";
 import configViewEngine from "./configs/viewEngine";
 import initWebRoutes from "./routes/web";
 import connectDB from "./configs/connectDB";

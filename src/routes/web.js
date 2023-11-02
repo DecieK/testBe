@@ -1,6 +1,5 @@
-// import express from "express";
-const express = require("express");
-import userController from "../controller/userController.js";
+import express from "express";
+import userController from "../controller/userController";
 
 
 // var appRoot = require("app-root-path");
@@ -78,7 +77,6 @@ const initWebRoutes = (app) => {
 };
 
 module.exports = initWebRoutes;
-// export default initWebRoutes;
 
 //them chổ loaiphim
 

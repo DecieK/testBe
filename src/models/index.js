@@ -44,21 +44,3 @@ db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 
 module.exports = db;
-export default db;
-
-// import express from 'express';
-// const app = express()
-// const PORT = 4000
-
-
-// app.get('/home', (req, res) => {
-//   res.status(200).json('Welcome, your app is working well');
-// })
-
-
-// app.listen(PORT, () => {
-//   console.log(`Server running at http://localhost:${PORT}`);
-// });
-
-// // Export the Express API
-// export default app
