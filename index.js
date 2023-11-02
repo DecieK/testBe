@@ -1,6 +1,7 @@
 // Import packages
 const express = require("express");
 const home = require("./src/routes/home");
+import configViewEngine from "./src/configs/viewEngine";
 
 // Middlewares
 const app = express();
