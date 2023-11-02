@@ -35,7 +35,7 @@ const corsConfig = {
 }
 
 const app = express();
-app.use(cors(corsConfig));
+// app.use(cors(corsConfig));
 
 const port = process.env.PORT || 8080; //backup, .port or 3000
 
