@@ -44,6 +44,7 @@ db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 
 module.exports = db;
+export default db;
 
 // import express from 'express';
 // const app = express()

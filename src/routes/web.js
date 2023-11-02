@@ -1,6 +1,6 @@
 // import express from "express";
 const express = require("express");
-import userController from "../controller/userController";
+import userController from "../controller/userController.js";
 
 
 // var appRoot = require("app-root-path");

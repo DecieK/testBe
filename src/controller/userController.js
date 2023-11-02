@@ -1,5 +1,5 @@
-import userService from "../services/userService";
-import db from "../models/index";
+import userService from "../services/userService.js";
+import db from "../models/index.js";
 // import Test from "../services/Test";
 
 
