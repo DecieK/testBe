@@ -2,15 +2,12 @@ const express = require("express");
 const router = express.Router();
 
 router.get("/", async (req, res, next) => {
-    return new Promise(async (resolve, reject) => {
+    return res.status(200).json({
+
+        chitietve: await db.chitietves.findAll({}),
 
 
 
-        chitietve = await db.chitietves.findAll({
-            where: { id_Ve: id_ve },
-        });
-
-        resolve(chitietve);
 
     });
     //   return res.status(200).json({
