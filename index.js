@@ -3,7 +3,7 @@
 // const home = require("./src/routes/home");
 // import configViewEngine from "./src/configs/viewEngine";
 // import initWebRoutes from "./src/routes/web";
-// // import connectDB from "./src/configs/connectDB";
+// import connectDB from "./src/configs/connectDB";
 // // Middlewares
 // const app = express();
 // app.use(express.json());
@@ -11,7 +11,7 @@
 // // //init web route (dieu huong website)
 // initWebRoutes(app);
 // // //connectDatabase
-// // connectDB();
+// connectDB();
 // // Routes
 // app.use("/home", home);
 
@@ -21,9 +21,9 @@
 
 const express = require("express");
 // import express from "express";
-import configViewEngine from "./src/configs/viewEngine";
-import initWebRoutes from "./src/routes/web";
-import connectDB from "./src/configs/connectDB";
+import configViewEngine from "./configs/viewEngine";
+import initWebRoutes from "./routes/web";
+import connectDB from "./configs/connectDB";
 import cors from "cors";
 import bodyParser from "body-parser";
 
@@ -35,15 +35,15 @@ const corsConfig = {
 }
 
 const app = express();
-// app.use(cors(corsConfig));
+app.use(cors(corsConfig));
 
 const port = process.env.PORT || 8080; //backup, .port or 3000
 
 //cauhinh cho phep gui data tu client len phia server; body-parser da tich hop trong express
 // app.use(express.urlencoded({ extended: true }));
 // app.use(express.json());
-// app.use(bodyParser.urlencoded({limit: '50mb', extended: true }));
-// app.use(bodyParser.json({limit: '50mb'}));
+app.use(bodyParser.urlencoded({limit: '50mb', extended: true }));
+app.use(bodyParser.json({limit: '50mb'}));
 
 
 // app.use(express.urlencoded({ extended: true }));
@@ -52,11 +52,11 @@ const port = process.env.PORT || 8080; //backup, .port or 3000
 //setup viewEngine
 configViewEngine(app);
 //init web route (dieu huong website)
-// initWebRoutes(app);
+initWebRoutes(app);
 //connectDatabase
-// connectDB();
-
+connectDB();
 app.use("/home", home);
+
 
 app.listen(port, () => {
   console.log(`Backend Nodejs running on port ${port}`);
