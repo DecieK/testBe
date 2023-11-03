@@ -1,6 +1,7 @@
 // Import packages
 const express = require("express");
 const home = require("./src/routes/home");
+const web = require("./src/routes/web")
 // import configViewEngine from "./src/configs/viewEngine";
 // import initWebRoutes from "./src/routes/web";
 // import connectDB from "./src/configs/connectDB";
@@ -12,7 +13,8 @@ app.use(express.json());
 // initWebRoutes(app);
 // //connectDatabase
 // connectDB();
-// Routes
+// Routes\
+app.use("/a",web)
 app.use("/home", home);
 
 // connection
