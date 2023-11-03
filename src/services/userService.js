@@ -191,40 +191,40 @@ let handleDatve = (data) => {
   });
 };
 
-// let handleTTchitietve = (id_ve) => {
-//   return new Promise(async (resolve, reject) => {
-//     try {
-//       let chitietve = "";
-//       if (id_ve === "ALL") {
-//         chitietve = await db.chitietves.findAll({
-//         });
-//       }
-
-//       if (id_ve && id_ve !== "ALL") {
-//         chitietve = await db.chitietves.findAll({
-//           where: { id_Ve: id_ve },
-//         });
-//       }
-//       resolve(chitietve);
-//     } catch (e) {
-//       reject(e);
-//     }
-//   });
-// };
-let handleTTchitietve = () => {
+let handleTTchitietve = (id_ve) => {
   return new Promise(async (resolve, reject) => {
     try {
       let chitietve = "";
+      if (id_ve === "ALL") {
         chitietve = await db.chitietves.findAll({
         });
-      
+      }
 
+      if (id_ve && id_ve !== "ALL") {
+        chitietve = await db.chitietves.findAll({
+          where: { id_Ve: id_ve },
+        });
+      }
       resolve(chitietve);
     } catch (e) {
       reject(e);
     }
   });
 };
+// let handleTTchitietve = () => {
+//   return new Promise(async (resolve, reject) => {
+//     try {
+//       let chitietve = "";
+//         chitietve = await db.chitietves.findAll({
+//         });
+      
+
+//       resolve(chitietve);
+//     } catch (e) {
+//       reject(e);
+//     }
+//   });
+// };
 
 let handleTTGhe = (key) => {
   return new Promise(async (resolve, reject) => {
