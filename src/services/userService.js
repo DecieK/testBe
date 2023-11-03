@@ -1,5 +1,5 @@
 // import { getSpaceUntilMaxLength } from "@testing-library/user-event/dist/utils";
-import db from "../models/index";
+// import db from "../models/index";
 // const { Op } = require("sequelize");
 // import bcrypt, { hash } from "bcryptjs"; //hashpassword
 
@@ -191,20 +191,34 @@ let handleDatve = (data) => {
   });
 };
 
-let handleTTchitietve = (id_ve) => {
+// let handleTTchitietve = (id_ve) => {
+//   return new Promise(async (resolve, reject) => {
+//     try {
+//       let chitietve = "";
+//       if (id_ve === "ALL") {
+//         chitietve = await db.chitietves.findAll({
+//         });
+//       }
+
+//       if (id_ve && id_ve !== "ALL") {
+//         chitietve = await db.chitietves.findAll({
+//           where: { id_Ve: id_ve },
+//         });
+//       }
+//       resolve(chitietve);
+//     } catch (e) {
+//       reject(e);
+//     }
+//   });
+// };
+let handleTTchitietve = () => {
   return new Promise(async (resolve, reject) => {
     try {
       let chitietve = "";
-      if (id_ve === "ALL") {
         chitietve = await db.chitietves.findAll({
         });
-      }
+      
 
-      if (id_ve && id_ve !== "ALL") {
-        chitietve = await db.chitietves.findAll({
-          where: { id_Ve: id_ve },
-        });
-      }
       resolve(chitietve);
     } catch (e) {
       reject(e);
