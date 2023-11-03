@@ -25,7 +25,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
 const port = process.env.PORT || 3000;
-const programmingLanguagesRouter = require('./src/routes/web');
+// const programmingLanguagesRouter = require('./src/routes/web.js');
 const home = require("./src/routes/home");
 
 app.use(bodyParser.json());
@@ -40,7 +40,7 @@ app.get('/', (req, res) => {
 })
 app.use("/home", home);
 
-app.use('/web', programmingLanguagesRouter);
+// app.use('/web', programmingLanguagesRouter);
 
 /* Error handler middleware */
 app.use((err, req, res, next) => {
